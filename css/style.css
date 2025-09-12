@@ -1,0 +1,31 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilo del header */
+.barraInicial{
+    background-color: #fde6ec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo{
+    width: 5%;
+}
+
+.navegacion{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding-right: 35px;
+}
+
+.navegacion li a{
+    text-decoration: none;
+    color: black;
+}
