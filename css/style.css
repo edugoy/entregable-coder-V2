@@ -6,6 +6,7 @@
 }
 
 /* estilo del header */
+
 .barraInicial{
     background-color: #fde6ec;
     display: flex;
@@ -28,4 +29,15 @@
 .navegacion li a{
     text-decoration: none;
     color: black;
+}
+
+/* Cambio para el carousel */
+
+.carousel-inner{
+    height: 500px;
+}
+
+.mejorasImagenes{
+    height: 100%;
+    object-fit: contain;
 }
