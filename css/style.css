@@ -45,16 +45,95 @@
 
 /* barra de info */
 .contenedorInfo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
+  background:#fde6ec;
+  display:flex;
+  flex-direction: column;     
+  align-items: stretch;       
+  margin:10px;
+  padding:10px;
+}
+
+.contenedorInfo > div{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
+  padding:1rem 0;
+  border-bottom:1px solid #999;   
+}
+
+.contenedorInfo > div:last-child{
+  border-bottom:none;           
 }
 
 .contenedorInfo img{
-    width: 15%;
+  width:48px;                    
+  height:auto;
+  margin-bottom:.5rem;
 }
+
+/* info de nosotros */
+#nosotros .contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.textoUs {
+  order: 2;
+}
+
+.fotoUs {
+  order: 1;
+}
+
+.fotoUs img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* opcional */
+}
+
+/* Desktop (fila: texto izquierda, foto derecha) */
+@media (min-width: 992px) {
+  #nosotros .contenedor {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .textoUs {
+    flex: 2;   /* 75% */
+    order: 2;  /* aparece primero */
+  }
+
+  .fotoUs {
+    flex: 1;   /* 25% */
+    order: 2;  /* aparece después */
+  }
+}
+
+
+/* Desktop: en fila + separadores verticales */
+@media (min-width: 992px){       
+  .contenedorInfo{
+    flex-direction: row;
+    align-items: center;
+  }
+  .contenedorInfo > div{
+    flex:1;                       
+    padding:0 1rem;
+    border-bottom:none;          
+    border-right:1px solid #999; 
+  }
+  .contenedorInfo > div:last-child{
+    border-right:none;          
+  }
+}
+
 
 /* estilos del main */
 /* subititulos generales */
@@ -70,6 +149,10 @@ h2{
   grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 1rem;
   margin-top: 1.5rem;
+}
+
+.productos-ind h3, .productos-ind p {
+    font-family: "Montserrat", sans-serif;
 }
 
 .productos-ind article{
@@ -93,4 +176,22 @@ h2{
   .productos-ind {
     grid-template-columns: repeat(4, minmax(0,1fr));
   }
+}
+
+
+/* redes de contacto */
+main section ul li{
+    list-style: none;
+    text-align: center;
+}
+
+main section ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+/* footer */
+footer p{
+    background-color: #fde6ec;
+    text-align: center;
 }
